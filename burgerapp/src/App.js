@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div>
         <Layout>
-          <p>Testing...</p>
+          <p>Layout child</p>
         </Layout>
       </div>
     )
