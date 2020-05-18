@@ -7,10 +7,8 @@ import classes from './SideDrawer.module.css'
 const sideDrawer = props => {
   console.log('PROPS OPEN', props.open)
   let attachedClasses = [classes['SideDrawer'], classes['Close']]
-  //console.log('attached string ', attachedClasses.join(' '))
   if (props.open) {
     attachedClasses = [classes['SideDrawer'], classes['Open']]
-    //console.log('after open ', attachedClasses.join(' '))
   }
   console.log('attached string ', attachedClasses.join(' '))
   return (

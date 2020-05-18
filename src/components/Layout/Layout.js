@@ -6,17 +6,21 @@ import classes from './Layout.module.css'
 
 class Layout extends Component {
   state = {
-    showSideDrawer: true,
+    showSideDrawer: false,
   }
 
   sideDrawerClosedHandler = () => {
     this.setState({ showSideDrawer: false })
   }
 
+  sideDrawerOpenedHandler = () => {
+    this.setState({ showSideDrawer: true })
+  }
+
   render() {
     return (
       <React.Fragment>
-        <Toolbar />
+        <Toolbar openMenu={this.sideDrawerOpenedHandler} />
         <SideDrawer open={this.state.showSideDrawer} closed={this.sideDrawerClosedHandler} />
         <main className={classes['content']}>{this.props.children}</main>
       </React.Fragment>
