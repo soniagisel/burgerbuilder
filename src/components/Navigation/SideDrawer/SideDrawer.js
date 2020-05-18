@@ -5,12 +5,10 @@ import React from 'react'
 import classes from './SideDrawer.module.css'
 
 const sideDrawer = props => {
-  console.log('PROPS OPEN', props.open)
   let attachedClasses = [classes['SideDrawer'], classes['Close']]
   if (props.open) {
     attachedClasses = [classes['SideDrawer'], classes['Open']]
   }
-  console.log('attached string ', attachedClasses.join(' '))
   return (
     <React.Fragment>
       <Backdrop show={props.open} clicked={props.closed} />
