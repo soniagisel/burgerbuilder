@@ -6,7 +6,7 @@ import classes from './Modal.module.css'
 class Modal extends Component {
   //this could be a functional component but I'm just ckecking the lifecycle work
   shouldComponentUpdate(nextProps, nextState) {
-    return nextProps.show !== this.props.show
+    return nextProps.show !== this.props.show || nextProps.children !== this.props.children
   }
 
   componentWillUpdate() {
